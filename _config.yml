@@ -14,17 +14,22 @@ permalink:        /:title/
 
 # Setup
 title:            Quora Competition
-tagline:          'A project webpage'
+#tagline:          'A project webpage'
 description:      'Quora competition'
 url:              "https://mengxinji.github.io/Quora"   
 baseurl:          "/Quora" 
 
 
 author:
-  name:           'MengxinJi'
-  url:            "https://twitter.com/mengxinji"
+  name:           'Mengxin'
+  email:             "mengxin.ji1992@gmail.com"
+  twitter:          # "paululele"
+  instagram:        # "paululele"
+  github:            "MengxinJi"
+  facebook:          "Mengxin Ji"
+  linkedin:          "Mengxin Ji"
 
-paginate:         5
+#paginate:         5
 
 # Custom vars
 version:          2.1.0
