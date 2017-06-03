@@ -1,38 +1,37 @@
-# Dependencies
-markdown:         kramdown
-highlighter:      rouge
-kramdown:
-  auto_ids:         true
-  footnote_nr:      1
-  entity_output:    as_char
-  toc_levels:       1..6
-  enable_coderay:   false
+title: "Quora Competition"
+author: "Mengxin Ji"
+description: "A Quora Competition - Course Project"
+more: "read more »"
+url:  "https://mengxinji.github.io/Quora"   
+baseurl: "/Quora" # comment out if in root directory
 
-# Permalinks
-permalink:        /:title/
-#relative_permalinks: true
+comments:
+  disqus: "mengxinji"
+#  isso: "comments.mysite.org"
 
-# Setup
-title:            Quora Competition
-#tagline:          'A project webpage'
-description:      'Quora competition'
-url:              "https://mengxinji.github.io/Quora"   
-baseurl:          "/Quora" 
+style:
+  body: 'white'
+  margin: 0%
+  padding: 30%
+  nav: "#222"
+  articles: 'stripe' # 'light' 'dark' and 'stripe' possible
+  uppercase: true
 
+# see http://fontawesome.io/icons/#brand for all possible icons
+# notice: squared icons only work if supported by font-awesome
 
-author:
-  name:           'Mengxin'
-  email:             "mengxin.ji1992@gmail.com"
-  twitter:          # "paululele"
-  instagram:        # "paululele"
-  github:            "MengxinJi"
-  facebook:          "Mengxin Ji"
-  linkedin:          "Mengxin Ji"
+links:
+  - github: {url: "https://github.com/MengxinJi/", square: true}
+  #- reddit: {url: "https://www.reddit.com/user/me/", square: true}
+  #- twitter: {url: "https://twitter.com/me/", square: true}
+  - facebook: {url: "https://www.facebook.com/mumujimx", square: true}
+  #- google-plus: {url: "https://plus.google.com/+me", square: true}
+  - youtube: {url: "https://www.youtube.com/user/mengxin", square: true}
+  - tumblr: {url: "http://me.tumblr.com/", square: true}
+  #- steam: {url: "http://steamcommunity.com/id/me/", square: true}
 
-#paginate:         5
-
-# Custom vars
-version:          2.1.0
-
-github:
-  repo:          "https://github.com/MengxinJi/Quaro"
+paginate: 10
+excerpt_separator: "\n\n\n" # excerpt ends after two blank lines
+permalink: pretty
+defaults: [{scope: {path: ""}, values: {layout: "default"}}, {scope: {path: "", type: "posts"}, values: {comments: true}}]
+gems: [jekyll-feed, jekyll-paginate] # include feed plugin (supported by gh-pages)
