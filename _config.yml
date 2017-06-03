@@ -1,9 +1,9 @@
 # Dependencies
-#markdown:         redcarpet
+markdown:         kramdown
 highlighter:      rouge
 
 # Permalinks
-permalink:        pretty
+permalink:        /:title/
 #relative_permalinks: true
 
 # Setup
@@ -16,7 +16,7 @@ baseurl:          "/Quaro"
 
 author:
   name:           'Mengxin Ji'
-  url:            https://twitter.com/mengxinji
+  url:            "https://twitter.com/mengxinji"
 
 paginate:         5
 
