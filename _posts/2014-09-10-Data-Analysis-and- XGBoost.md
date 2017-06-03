@@ -49,7 +49,7 @@ df_train.head()
 
 
 <div>
-<table border="1" class="dataframe">
+<table border=“0.5” class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -162,7 +162,7 @@ sub.head()
 
 
 <div>
-<table border="1" class="dataframe">
+<table border=“0.5” class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -289,7 +289,7 @@ print('mean-train {:.2f} std-train {:.2f} mean-test {:.2f} std-test {:.2f} max-t
 
 
 
-![png](Untitled1_files/Untitled1_6_1.png)
+![png](https://mengxinji.github.io/Quora/Untitled1_files/Untitled1_6_1.png)
 
 
 
@@ -313,7 +313,7 @@ print('mean-train {:.2f} std-train {:.2f} mean-test {:.2f} std-test {:.2f} max-t
 
 
 
-![png](Untitled1_files/Untitled1_7_1.png)
+![png](https://mengxinji.github.io/Quora/Untitled1_files/Untitled1_7_1.png)
 
 
 
@@ -337,7 +337,7 @@ plt.axis('off')
 
 
 
-![png](Untitled1_files/Untitled1_9_1.png)
+![png](https://mengxinji.github.io/Quora/Untitled1_files/Untitled1_9_1.png)
 
 
 Semantic Analysis
@@ -417,7 +417,7 @@ plt.xlabel('word_match_share', fontsize=15)
 
 
 
-![png](Untitled1_files/Untitled1_14_1.png)
+![png](https://mengxinji.github.io/Quora/Untitled1_files/Untitled1_14_1.png)
 
 
 TF-IDF
@@ -514,9 +514,7 @@ plt.xlabel('word_match_share', fontsize=15)
 
 
 
-
-![png](Untitled1_files/Untitled1_19_2.png)
-
+![png](https://mengxinji.github.io/Quora/Untitled1_files/Untitled1_19_1.png)
 
 
 ```python
