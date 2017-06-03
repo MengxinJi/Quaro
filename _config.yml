@@ -1,21 +1,27 @@
 # Dependencies
 markdown:         kramdown
 highlighter:      rouge
+kramdown:
+  auto_ids:         true
+  footnote_nr:      1
+  entity_output:    as_char
+  toc_levels:       1..6
+  enable_coderay:   false
 
 # Permalinks
 permalink:        /:title/
 #relative_permalinks: true
 
 # Setup
-title:            Quaro Competition
+title:            Quora Competition
 tagline:          'A project webpage'
 description:      'Quora competition'
-url:              "https://mengxinji.github.io/Quaro/"   
-baseurl:          "/Quaro" 
+url:              "https://mengxinji.github.io/Quora"   
+baseurl:          "/Quora" 
 
 
 author:
-  name:           'Mengxin Ji'
+  name:           'MengxinJi'
   url:            "https://twitter.com/mengxinji"
 
 paginate:         5
