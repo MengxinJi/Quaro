@@ -139,7 +139,7 @@ print()
 
 
 
-![png](Untitled1_files/Untitled1_2_1.png)
+![png](https://mengxinji.github.io/Quora/Untitled1_files/Untitled1_2_1.png)
 
 
 
