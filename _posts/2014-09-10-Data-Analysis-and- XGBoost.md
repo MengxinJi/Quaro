@@ -49,7 +49,7 @@ df_train.head()
 
 
 <div>
-<table border=“0.5” class="dataframe">
+<table border=“1” class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
