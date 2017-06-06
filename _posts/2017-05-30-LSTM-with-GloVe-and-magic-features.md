@@ -4,16 +4,14 @@ date:   2017-05-30 22:37:00
 categories: LSTM
 ---
 
-In this part, we use an LSTM model with GloVe embeddings along with magic features. 
-Single model may achieve LB scores at around 0.18+, average ensembles can get 0.17+
-
-**Code**
-
 ```python
+'''
+Example of an LSTM model with GloVe embeddings along with magic features
 
-{% highlight c %}
+Tested under Keras 2.0 with Tensorflow 1.0 backend
 
-
+Single model may achieve LB scores at around 0.18+, average ensembles can get 0.17+
+'''
 
 ########################################
 ## import packages
@@ -45,9 +43,6 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 #sys.setdefaultencoding('utf-8')
-
-{% endhighlight %}
-
 ```
 
 
