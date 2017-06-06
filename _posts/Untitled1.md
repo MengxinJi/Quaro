@@ -1,4 +1,8 @@
-
+---
+title:  Data Analysis and XGBoost
+date:   2017-05-31 22:37:00
+categories: Exploratory Analysis
+---
 
 ```python
 import numpy as np # linear algebra
@@ -133,7 +137,7 @@ print()
 
 
 
-![png](Untitled1_files/Untitled1_2_1.png)
+![png](https://mengxinji.github.io/Quora/Untitled1_files/Untitled1_2_1.png)
 
 
 
@@ -283,7 +287,7 @@ print('mean-train {:.2f} std-train {:.2f} mean-test {:.2f} std-test {:.2f} max-t
 
 
 
-![png](Untitled1_files/Untitled1_6_1.png)
+![png](https://mengxinji.github.io/Quora/Untitled1_files/Untitled1_6_1.png)
 
 
 
@@ -307,7 +311,7 @@ print('mean-train {:.2f} std-train {:.2f} mean-test {:.2f} std-test {:.2f} max-t
 
 
 
-![png](Untitled1_files/Untitled1_7_1.png)
+![png](https://mengxinji.github.io/Quora/Untitled1_files/Untitled1_7_1.png)
 
 
 
@@ -331,7 +335,7 @@ plt.axis('off')
 
 
 
-![png](Untitled1_files/Untitled1_9_1.png)
+![png](https://mengxinji.github.io/Quora/Untitled1_files/Untitled1_9_1.png)
 
 
 Semantic Analysis
@@ -366,14 +370,11 @@ Initial Feature Analysis
 
 ```python
 import nltk
-nltk.download()
+#nltk.download()
 from nltk.corpus import stopwords
 
 stops = set(stopwords.words('english'))
 ```
-
-    showing info https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/index.xml
-
 
 
 ```python
@@ -406,12 +407,12 @@ plt.xlabel('word_match_share', fontsize=15)
 
 
 
-    <matplotlib.text.Text at 0x13e9fc860>
+    <matplotlib.text.Text at 0x144015c50>
 
 
 
 
-![png](Untitled1_files/Untitled1_14_1.png)
+![png](https://mengxinji.github.io/Quora/Untitled1_files/Untitled1_14_1.png)
 
 
 TF-IDF
@@ -504,12 +505,12 @@ plt.xlabel('word_match_share', fontsize=15)
 
 
 
-    <matplotlib.text.Text at 0x152824780>
+    <matplotlib.text.Text at 0x142a1bb70>
 
 
 
 
-![png](Untitled1_files/Untitled1_19_2.png)
+![png](https://mengxinji.github.io/Quora/Untitled1_files/Untitled1_19_1.png)
 
 
 
@@ -538,20 +539,8 @@ x_test['tfidf_word_match'] = df_test.apply(tfidf_word_match_share, axis=1, raw=T
 y_train = df_train['is_duplicate'].values
 ```
 
-
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-8-e63caec5df15> in <module>()
-          2 x_train = pd.DataFrame()
-          3 x_test = pd.DataFrame()
-    ----> 4 x_train['word_match'] = train_word_match
-          5 x_train['tfidf_word_match'] = tfidf_train_word_match
-          6 x_test['word_match'] = df_test.apply(word_match_share, axis=1, raw=True)
-
-
-    NameError: name 'train_word_match' is not defined
+    /Users/mengxin/anaconda/lib/python3.6/site-packages/ipykernel/__main__.py:17: RuntimeWarning: invalid value encountered in double_scalars
+    /Users/mengxin/anaconda/lib/python3.6/site-packages/ipykernel/__main__.py:17: RuntimeWarning: invalid value encountered in long_scalars
 
 
 
@@ -609,20 +598,50 @@ watchlist = [(d_train, 'train'), (d_valid, 'valid')]
 bst = xgb.train(params, d_train, 400, watchlist, early_stopping_rounds=50, verbose_eval=10)
 ```
 
-
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-9-778192c5c9c7> in <module>()
-    ----> 1 d_train = xgb.DMatrix(x_train, label=y_train)
-          2 d_valid = xgb.DMatrix(x_valid, label=y_valid)
-          3 
-          4 watchlist = [(d_train, 'train'), (d_valid, 'valid')]
-          5 
-
-
-    NameError: name 'y_train' is not defined
+    [0]	train-logloss:0.683186	valid-logloss:0.683206
+    Multiple eval metrics have been passed: 'valid-logloss' will be used for early stopping.
+    
+    Will train until valid-logloss hasn't improved in 50 rounds.
+    [10]	train-logloss:0.602007	valid-logloss:0.602193
+    [20]	train-logloss:0.544809	valid-logloss:0.54511
+    [30]	train-logloss:0.503082	valid-logloss:0.503466
+    [40]	train-logloss:0.47192	valid-logloss:0.472358
+    [50]	train-logloss:0.448264	valid-logloss:0.448738
+    [60]	train-logloss:0.43009	valid-logloss:0.430585
+    [70]	train-logloss:0.415979	valid-logloss:0.416487
+    [80]	train-logloss:0.404944	valid-logloss:0.405457
+    [90]	train-logloss:0.396245	valid-logloss:0.396774
+    [100]	train-logloss:0.389382	valid-logloss:0.38992
+    [110]	train-logloss:0.383976	valid-logloss:0.384525
+    [120]	train-logloss:0.3797	valid-logloss:0.380254
+    [130]	train-logloss:0.376291	valid-logloss:0.376838
+    [140]	train-logloss:0.373578	valid-logloss:0.374111
+    [150]	train-logloss:0.3714	valid-logloss:0.371925
+    [160]	train-logloss:0.369664	valid-logloss:0.370178
+    [170]	train-logloss:0.36827	valid-logloss:0.368763
+    [180]	train-logloss:0.36714	valid-logloss:0.367619
+    [190]	train-logloss:0.366234	valid-logloss:0.366711
+    [200]	train-logloss:0.365503	valid-logloss:0.365977
+    [210]	train-logloss:0.364899	valid-logloss:0.365363
+    [220]	train-logloss:0.3644	valid-logloss:0.364851
+    [230]	train-logloss:0.36398	valid-logloss:0.364426
+    [240]	train-logloss:0.363632	valid-logloss:0.364076
+    [250]	train-logloss:0.363341	valid-logloss:0.363786
+    [260]	train-logloss:0.363062	valid-logloss:0.363512
+    [270]	train-logloss:0.362784	valid-logloss:0.363243
+    [280]	train-logloss:0.362553	valid-logloss:0.363018
+    [290]	train-logloss:0.362359	valid-logloss:0.36283
+    [300]	train-logloss:0.362208	valid-logloss:0.362681
+    [310]	train-logloss:0.36206	valid-logloss:0.362534
+    [320]	train-logloss:0.36191	valid-logloss:0.36239
+    [330]	train-logloss:0.361767	valid-logloss:0.362255
+    [340]	train-logloss:0.361648	valid-logloss:0.362143
+    [350]	train-logloss:0.361529	valid-logloss:0.362026
+    [360]	train-logloss:0.361413	valid-logloss:0.361921
+    [370]	train-logloss:0.361299	valid-logloss:0.361817
+    [380]	train-logloss:0.36121	valid-logloss:0.361736
+    [390]	train-logloss:0.361115	valid-logloss:0.361661
+    [399]	train-logloss:0.361043	valid-logloss:0.361602
 
 
 
