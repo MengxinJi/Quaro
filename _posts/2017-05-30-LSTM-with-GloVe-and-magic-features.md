@@ -9,6 +9,8 @@ Single model may achieve LB scores at around 0.18+, average ensembles can get 0.
 
 **Code**
 
+```python
+
 {% highlight c %}
 
 
@@ -45,6 +47,8 @@ sys.setdefaultencoding('utf-8')
 #sys.setdefaultencoding('utf-8')
 
 {% endhighlight %}
+
+```
 
 
 ```python
