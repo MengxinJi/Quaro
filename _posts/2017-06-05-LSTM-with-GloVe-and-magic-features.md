@@ -1,6 +1,6 @@
 ---
 title:  "LSTM with GloVe and magic features"
-date:   2017-06-04 22:37:00
+date:   2017-06-05 22:37:00
 categories: LSTM
 ---
 
